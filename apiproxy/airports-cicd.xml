@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="2" name="airports-cicd">
+  <DisplayName>airports-cicd</DisplayName>
+  <Description>Jenkins Build: jenkins-apigee-cicd-1-main-16 Author: cicd@apigee.google.com</Description>
+  <CreatedAt>1744903617060</CreatedAt>
+  <LastModifiedAt>1744903617060</LastModifiedAt>
+  <BasePaths>/airports-cicd/v1</BasePaths>
+  <Policies>
+    <Policy>AssignMessage.AirportsMock</Policy>
+    <Policy>Javascript.AirportByIataCode</Policy>
+    <Policy>Javascript.AirportsFilter</Policy>
+    <Policy>RaiseFault.404</Policy>
+  </Policies>
+  <ProxyEndpoints>
+    <ProxyEndpoint>default</ProxyEndpoint>
+  </ProxyEndpoints>
+  <Resources>
+    <Resource>jsc://airportByCode.js</Resource>
+    <Resource>jsc://airportsFilter.js</Resource>
+  </Resources>
+</APIProxy>
